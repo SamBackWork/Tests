@@ -1,0 +1,26 @@
+piVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: my-app
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: my-app
+      template:
+        metadata:
+          labels:
+            app: my-app
+        spec:
+          containers:
+          - name: my-app-backend
+            image: $CI_REGISTRY_IMAGE/my-app-backend:latest
+            ports:
+            - containerPort: 8000  # Замени на порт твоего бэкенда
+            # env:  # Если нужны переменные окружения
+            # - name: SOME_VARIABLE
+            #   value: "some_value"
+          - name: my-app-frontend
+            image: $CI_REGISTRY_IMAGE/my-app-frontend:latest
+            ports:
+            - containerPort: 3000  # Замени на порт твоего фронтенда

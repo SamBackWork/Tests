@@ -1,0 +1,195 @@
+[
+  {
+    "model": "firstapp.question",
+    "pk": 1,
+    "fields": {
+      "text": "Укажите ваш возраст:",
+      "question_type": "single_choice",
+      "order": 1
+    }
+  },
+  {
+    "model": "firstapp.answer",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "text": "Меньше 18"
+    }
+  },
+  {
+    "model": "firstapp.answer",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "text": "18-25"
+    }
+  },
+  {
+    "model": "firstapp.answer",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "text": "26-35"
+    }
+  },
+  {
+    "model": "firstapp.answer",
+    "pk": 4,
+    "fields": {
+      "question": 1,
+      "text": "36+"
+    }
+  },
+  {
+    "model": "firstapp.question",
+    "pk": 2,
+    "fields": {
+      "text": "Вы любите сладкое?",
+      "question_type": "single_choice",
+      "order": 2
+    }
+  },
+    {
+    "model": "firstapp.answer",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "text": "Да"
+        }
+    },
+    {
+    "model": "firstapp.answer",
+    "pk": 6,
+    "fields": {
+      "question": 2,
+      "text": "Нет"
+    }
+  },
+  {
+    "model": "firstapp.question",
+    "pk": 3,
+    "fields": {
+      "text": "Какой ваш любимый десерт?",
+      "question_type": "text",
+      "order": 3
+    }
+  },
+   {
+    "model": "firstapp.question",
+    "pk": 5,
+    "fields": {
+      "text": "Какой ваш любимый напиток?",
+      "question_type": "single_choice",
+      "order": 2
+      }
+    },
+    {
+      "model":"firstapp.answer",
+      "pk": 7,
+      "fields":{
+        "question": 5,
+        "text": "Чай"
+      }
+    },
+    {
+      "model":"firstapp.answer",
+      "pk": 8,
+      "fields":{
+        "question": 5,
+        "text": "Кофе"
+    }
+    },
+    {
+       "model": "firstapp.question",
+        "pk": 6,
+        "fields": {
+            "text": "Какой кофе вы предпочитаете?",
+            "question_type": "text",
+            "order": 3
+            }
+    },
+{
+       "model": "firstapp.question",
+        "pk": 7,
+        "fields": {
+            "text": "Какой чай вы предпочитаете?",
+            "question_type": "text",
+            "order": 3
+            }
+    },
+
+
+  {
+    "model": "firstapp.questionlink",
+    "pk": 1,
+    "fields": {
+      "source_question": 1,
+      "source_answer": 2,
+      "target_question": 2
+    }
+  },
+  {
+    "model": "firstapp.questionlink",
+    "pk": 2,
+    "fields": {
+      "source_question": 1,
+      "source_answer": 3,
+      "target_question": 2
+    }
+  },
+    {
+    "model": "firstapp.questionlink",
+    "pk": 3,
+    "fields": {
+      "source_question": 1,
+      "source_answer": 4,
+      "target_question": 2
+    }
+  },
+   {
+    "model": "firstapp.questionlink",
+    "pk": 4,
+    "fields": {
+        "source_question": 2,
+        "source_answer": 5,
+        "target_question": 3
+    }
+   },
+{
+    "model": "firstapp.questionlink",
+    "pk": 5,
+    "fields": {
+        "source_question": 2,
+        "source_answer": 6,
+        "target_question": 4
+           }
+},
+    {
+    "model": "firstapp.questionlink",
+    "pk": 6,
+    "fields":{
+      "source_question": 1,
+      "source_answer": 1,
+      "target_question": 5
+    }
+    },
+{
+    "model": "firstapp.questionlink",
+    "pk": 7,
+    "fields":{
+      "source_question": 5,
+      "source_answer": 8,
+      "target_question": 6
+    }
+    },
+    {
+      "model": "firstapp.questionlink",
+      "pk": 8,
+       "fields":{
+          "source_question": 5,
+          "source_answer": 7,
+          "target_question": 7
+       }
+    }
+
+]

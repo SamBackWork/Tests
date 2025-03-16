@@ -1,0 +1,17 @@
+piVersion: batch/v1
+    kind: Job
+    metadata:
+      name: db-migrate
+    spec:
+      template:
+        spec:
+          containers:
+          - name: migrate
+            image: $CI_REGISTRY_IMAGE/my-app-backend:latest  # Используем образ бэкенда
+            command: ["python", "manage.py", "migrate"]  # Команда для Django
+            # Если нужны переменные окружения для БД, добавь их здесь:
+            # env:
+            # - name: DATABASE_URL
+            #   value: "postgres://user:password@host:port/database"
+          restartPolicy: Never
+      backoffLimit: 4
